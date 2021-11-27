@@ -42,6 +42,7 @@ const Navbar = () => {
             <button 
             style={{
                 backgroundColor: "yellow",
+                opacity: "80%",
                 borderRadius: "50%",
                 color: "#000",
                 height: "3rem",

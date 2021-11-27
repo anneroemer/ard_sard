@@ -11,7 +11,7 @@ const Artworks = () => {
     const [artworks, setArtworks] = useState();
 
     useEffect(() => {
-        axios(`https://api.artic.edu/api/v1/artworks`, {
+        axios(`https://api.artic.edu/api/v1/artworks?limit=40`, {
         })
         .then((result) => {
             setArtworks(result.data.data)
