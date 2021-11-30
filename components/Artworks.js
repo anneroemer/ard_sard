@@ -43,12 +43,13 @@ const Artworks = () => {
             z-index: 200;
         }
         & .listItem__imgContainer {
-            display: block;
+            //display: block;
             height: 350px;
             width: 100vw;
             grid-area: 1 / 1 / -1 / -1;
             overflow: hidden;
-            position: absolute;
+            position: relative;
+            object-fit: contain;
         }
         & .listItem__img {
             height: 350px;

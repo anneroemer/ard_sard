@@ -43,28 +43,25 @@ const Search = () => {
     }
 
     const style = css`
-        background-color: #F4F0E8;
-        //margin: 0 auto;
+        margin: 0 auto;
         height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
+        & .searchTitle {
+            text-align: center;
+            padding-top: 2.5rem;
+            color: gray;
+        }
         & .searchInputField__container {
-            background-color: black;
-            height: 13rem;
-            width: 13rem;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            text-align: center;
         }
 
         & .searchInputField {
             all: unset;
             background-color: #F4F0E8;
             border-radius: 1000px;
+            border: 1px solid gray;
             padding: 0.2rem;
+            display: inline-block;
+            
         }
         & .searchResults__list {
             list-style: none;
@@ -90,7 +87,7 @@ const Search = () => {
 
     return ( 
         <div css={style}>
-            <h1>show me more art</h1>
+            <h1 className="searchTitle">show me more art</h1>
             <div className="searchInputField__container"> 
                 <input 
                 type="search" 

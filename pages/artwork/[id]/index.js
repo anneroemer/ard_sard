@@ -41,6 +41,9 @@ const Artwork = () => {
             grid-area: 1 / 1 / -1 / -1;
             height: 100%;
             width: 100vw;
+            position: relative;
+            object-fit: cover;
+            display: block;
         }
         & .imgContainer__img {
             object-fit: cover;
@@ -65,14 +68,12 @@ const Artwork = () => {
         }
         & .artworkMainText {
             padding: 0.6rem;
-
         }
         & .artworkMainText__title {
             font-size: 2.4rem;
             text-transform: uppercase;
             font-weight: 400;
-            margin: 0.5rem 0 0;
-            
+            margin: 3rem 0 0;           
         }
         & .artworkSecondaryText {
             padding: 0.6rem;
