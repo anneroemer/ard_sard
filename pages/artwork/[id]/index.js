@@ -72,6 +72,7 @@ const Artwork = () => {
             text-transform: uppercase;
             font-weight: 400;
             margin: 0.5rem 0 0;
+            
         }
         & .artworkSecondaryText {
             padding: 0.6rem;

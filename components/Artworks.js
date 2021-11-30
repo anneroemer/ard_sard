@@ -47,9 +47,11 @@ const Artworks = () => {
             height: 350px;
             width: 100vw;
             grid-area: 1 / 1 / -1 / -1;
+            overflow: hidden;
+            position: absolute;
         }
         & .listItem__img {
-            height: 100%;
+            height: 350px;
             width: 100vw;
             object-fit: cover;
             grid-area: 1 / 1 / -1 / -1;
@@ -68,7 +70,9 @@ const Artworks = () => {
             text-transform: uppercase;
             font-size: 2.2rem;
             color: yellow;
-            font-weight: 200;   
+            font-weight: 200;  
+            height: 40%;
+            overflow: hidden;
         }
         & .listItem__underline {
             height: 10px;
@@ -98,7 +102,7 @@ const Artworks = () => {
         <ul css={style}>
             {artworks?.map((artwork, index) => (
                 <li key={index} className="listItem">
-                    <Link href={`/artwork/${artwork.id}`} className="listItem__link">
+                    <Link href={`/artwork/${artwork.id}`} className="listItem__link" scroll>
                         <a className="listItem__linkAnchor">
                             <div className="listItem__textBox">
                                 <h2 className="listItem__title">{artwork.title}</h2>
@@ -109,9 +113,10 @@ const Artworks = () => {
                             <div className="listItem__imgContainer">
                                 <Image src={`https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg` } 
                                 alt={artwork.artist_title} 
-                                width={400} 
-                                height={400}
-                                layout="responsive"
+                                // width={400} 
+                                // height={400}
+                                // layout="responsive"
+                                layout="fill"
                                 className="listItem__img"
                                 />
                             </div>
